@@ -1,0 +1,3 @@
+[console_scripts]
+uart_bridge = robot_bridge.uart_bridge:main
+

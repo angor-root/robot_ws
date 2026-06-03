@@ -1,0 +1,38 @@
+[2.113s] Invoking command in '/home/caleb/malambot/robot_ws/src/robot_bridge': PYTHONPATH=/home/caleb/malambot/robot_ws/build/robot_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bridge build --build-base /home/caleb/malambot/robot_ws/build/robot_bridge/build install --record /home/caleb/malambot/robot_ws/build/robot_bridge/install.log --single-version-externally-managed install_data
+[2.818s] running egg_info
+[2.820s] creating ../../build/robot_bridge/robot_bridge.egg-info
+[2.820s] writing ../../build/robot_bridge/robot_bridge.egg-info/PKG-INFO
+[2.821s] writing dependency_links to ../../build/robot_bridge/robot_bridge.egg-info/dependency_links.txt
+[2.821s] writing entry points to ../../build/robot_bridge/robot_bridge.egg-info/entry_points.txt
+[2.822s] writing requirements to ../../build/robot_bridge/robot_bridge.egg-info/requires.txt
+[2.822s] writing top-level names to ../../build/robot_bridge/robot_bridge.egg-info/top_level.txt
+[2.822s] writing manifest file '../../build/robot_bridge/robot_bridge.egg-info/SOURCES.txt'
+[2.827s] reading manifest file '../../build/robot_bridge/robot_bridge.egg-info/SOURCES.txt'
+[2.828s] adding license file 'LICENSE'
+[2.830s] writing manifest file '../../build/robot_bridge/robot_bridge.egg-info/SOURCES.txt'
+[2.830s] running build
+[2.831s] running build_py
+[2.831s] creating /home/caleb/malambot/robot_ws/build/robot_bridge/build
+[2.832s] creating /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib
+[2.832s] creating /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge
+[2.833s] copying robot_bridge/__init__.py -> /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge
+[2.833s] copying robot_bridge/uart_bridge.py -> /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge
+[2.834s] running install
+[2.835s] running install_lib
+[2.837s] creating /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge
+[2.837s] copying /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge/__init__.py -> /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge
+[2.838s] copying /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge/uart_bridge.py -> /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge
+[2.839s] byte-compiling /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge/__init__.py to __init__.cpython-310.pyc
+[2.840s] byte-compiling /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge/uart_bridge.py to uart_bridge.cpython-310.pyc
+[2.844s] running install_data
+[2.845s] creating /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index
+[2.845s] creating /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index/resource_index
+[2.846s] creating /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index/resource_index/packages
+[2.846s] copying resource/robot_bridge -> /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index/resource_index/packages
+[2.846s] copying package.xml -> /home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge
+[2.847s] running install_egg_info
+[2.851s] Copying ../../build/robot_bridge/robot_bridge.egg-info to /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge-0.0.0-py3.10.egg-info
+[2.854s] running install_scripts
+[2.902s] Installing uart_bridge script to /home/caleb/malambot/robot_ws/install/robot_bridge/lib/robot_bridge
+[2.903s] writing list of installed files to '/home/caleb/malambot/robot_ws/build/robot_bridge/install.log'
+[2.960s] Invoked command in '/home/caleb/malambot/robot_ws/src/robot_bridge' returned '0': PYTHONPATH=/home/caleb/malambot/robot_ws/build/robot_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bridge build --build-base /home/caleb/malambot/robot_ws/build/robot_bridge/build install --record /home/caleb/malambot/robot_ws/build/robot_bridge/install.log --single-version-externally-managed install_data

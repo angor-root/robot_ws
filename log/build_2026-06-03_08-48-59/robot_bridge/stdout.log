@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/robot_bridge/robot_bridge.egg-info
+writing ../../build/robot_bridge/robot_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/robot_bridge/robot_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/robot_bridge/robot_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/robot_bridge/robot_bridge.egg-info/requires.txt
+writing top-level names to ../../build/robot_bridge/robot_bridge.egg-info/top_level.txt
+writing manifest file '../../build/robot_bridge/robot_bridge.egg-info/SOURCES.txt'
+reading manifest file '../../build/robot_bridge/robot_bridge.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/robot_bridge/robot_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/caleb/malambot/robot_ws/build/robot_bridge/build
+creating /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib
+creating /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge
+copying robot_bridge/__init__.py -> /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge
+copying robot_bridge/uart_bridge.py -> /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge
+running install
+running install_lib
+creating /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge
+copying /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge/__init__.py -> /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge
+copying /home/caleb/malambot/robot_ws/build/robot_bridge/build/lib/robot_bridge/uart_bridge.py -> /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge
+byte-compiling /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge/uart_bridge.py to uart_bridge.cpython-310.pyc
+running install_data
+creating /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index
+creating /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index/resource_index
+creating /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index/resource_index/packages
+copying resource/robot_bridge -> /home/caleb/malambot/robot_ws/install/robot_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge
+running install_egg_info
+Copying ../../build/robot_bridge/robot_bridge.egg-info to /home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages/robot_bridge-0.0.0-py3.10.egg-info
+running install_scripts
+Installing uart_bridge script to /home/caleb/malambot/robot_ws/install/robot_bridge/lib/robot_bridge
+writing list of installed files to '/home/caleb/malambot/robot_ws/build/robot_bridge/install.log'

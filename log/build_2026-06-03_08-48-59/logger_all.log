@@ -1,0 +1,127 @@
+[0.276s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'robot_bridge']
+[0.276s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['robot_bridge'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f01231623e0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f01232d3010>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f01232d3010>>)
+[0.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.764s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/caleb/malambot/robot_ws'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.793s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.793s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.793s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.794s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.794s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.794s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.795s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.795s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.795s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extension 'ignore'
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extension 'ignore_ament_install'
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extensions ['colcon_pkg']
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extension 'colcon_pkg'
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extensions ['colcon_meta']
+[0.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extension 'colcon_meta'
+[0.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extensions ['ros']
+[0.800s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_bridge) by extension 'ros'
+[0.807s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_bridge' with type 'ros.ament_python' and name 'robot_bridge'
+[0.807s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.807s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.807s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.807s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.807s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.877s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.877s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.881s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/caleb/malambot/robot_ws/install
+[0.885s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 391 installed packages in /opt/ros/humble
+[0.890s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'cmake_target' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[1.014s] Level 5:colcon.colcon_core.verb:set package 'robot_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.014s] DEBUG:colcon.colcon_core.verb:Building package 'robot_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/caleb/malambot/robot_ws/build/robot_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/caleb/malambot/robot_ws/install/robot_bridge', 'merge_install': False, 'path': '/home/caleb/malambot/robot_ws/src/robot_bridge', 'symlink_install': False, 'test_result_base': None}
+[1.015s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.018s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.019s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/caleb/malambot/robot_ws/src/robot_bridge' with build type 'ament_python'
+[1.019s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bridge', 'ament_prefix_path')
+[1.024s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.024s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/hook/ament_prefix_path.ps1'
+[1.026s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/hook/ament_prefix_path.dsv'
+[1.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/hook/ament_prefix_path.sh'
+[1.030s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.030s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.777s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/caleb/malambot/robot_ws/src/robot_bridge'
+[1.778s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.778s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/caleb/malambot/robot_ws/src/robot_bridge': PYTHONPATH=/home/caleb/malambot/robot_ws/build/robot_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bridge build --build-base /home/caleb/malambot/robot_ws/build/robot_bridge/build install --record /home/caleb/malambot/robot_ws/build/robot_bridge/install.log --single-version-externally-managed install_data
+[3.980s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/caleb/malambot/robot_ws/src/robot_bridge' returned '0': PYTHONPATH=/home/caleb/malambot/robot_ws/build/robot_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_bridge build --build-base /home/caleb/malambot/robot_ws/build/robot_bridge/build install --record /home/caleb/malambot/robot_ws/build/robot_bridge/install.log --single-version-externally-managed install_data
+[4.000s] Level 1:colcon.colcon_core.environment:checking '/home/caleb/malambot/robot_ws/install/robot_bridge' for CMake module files
+[4.001s] Level 1:colcon.colcon_core.environment:checking '/home/caleb/malambot/robot_ws/install/robot_bridge' for CMake config files
+[4.002s] Level 1:colcon.colcon_core.environment:checking '/home/caleb/malambot/robot_ws/install/robot_bridge/lib'
+[4.003s] Level 1:colcon.colcon_core.environment:checking '/home/caleb/malambot/robot_ws/install/robot_bridge/bin'
+[4.003s] Level 1:colcon.colcon_core.environment:checking '/home/caleb/malambot/robot_ws/install/robot_bridge/lib/pkgconfig/robot_bridge.pc'
+[4.004s] Level 1:colcon.colcon_core.environment:checking '/home/caleb/malambot/robot_ws/install/robot_bridge/lib/python3.10/site-packages'
+[4.004s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_bridge', 'pythonpath')
+[4.004s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/hook/pythonpath.ps1'
+[4.006s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/hook/pythonpath.dsv'
+[4.007s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/hook/pythonpath.sh'
+[4.008s] Level 1:colcon.colcon_core.environment:checking '/home/caleb/malambot/robot_ws/install/robot_bridge/bin'
+[4.008s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_bridge)
+[4.009s] INFO:colcon.colcon_core.shell:Creating package script '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/package.ps1'
+[4.012s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/package.dsv'
+[4.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/package.sh'
+[4.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/package.bash'
+[4.018s] INFO:colcon.colcon_core.shell:Creating package script '/home/caleb/malambot/robot_ws/install/robot_bridge/share/robot_bridge/package.zsh'
+[4.020s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/caleb/malambot/robot_ws/install/robot_bridge/share/colcon-core/packages/robot_bridge)
+[4.021s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.022s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.022s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.022s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.035s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.035s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.036s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.058s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.059s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caleb/malambot/robot_ws/install/local_setup.ps1'
+[4.061s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/caleb/malambot/robot_ws/install/_local_setup_util_ps1.py'
+[4.064s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caleb/malambot/robot_ws/install/setup.ps1'
+[4.067s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caleb/malambot/robot_ws/install/local_setup.sh'
+[4.068s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/caleb/malambot/robot_ws/install/_local_setup_util_sh.py'
+[4.070s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caleb/malambot/robot_ws/install/setup.sh'
+[4.072s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caleb/malambot/robot_ws/install/local_setup.bash'
+[4.073s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caleb/malambot/robot_ws/install/setup.bash'
+[4.075s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/caleb/malambot/robot_ws/install/local_setup.zsh'
+[4.076s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/caleb/malambot/robot_ws/install/setup.zsh'
