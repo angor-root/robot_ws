@@ -25,7 +25,7 @@ class UARTBridge(Node):
     def __init__(self):
         super().__init__('uart_bridge')
 
-        self.declare_parameter('port', '/dev/ttyAMA1')
+        self.declare_parameter('port', 'cat /dev/serial0')
         self.declare_parameter('baudrate', 115200)
         self.declare_parameter('status_timeout', 0.5)
 
