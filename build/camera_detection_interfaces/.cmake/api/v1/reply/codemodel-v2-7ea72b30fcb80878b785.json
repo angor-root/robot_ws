@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f230d4ee39493a5d807a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "camera_detection_interfaces__py",
+					"jsonFile" : "directory-camera_detection_interfaces__py-94b49a9fdd4e7be8bd81.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/caleb/Documents/robot_ws/build/camera_detection_interfaces/camera_detection_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "camera_detection_interfaces__rs",
+					"jsonFile" : "directory-camera_detection_interfaces__rs-9259990b09d0e83cad8c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/caleb/Documents/robot_ws/build/camera_detection_interfaces/camera_detection_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "camera_detection_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_camera_detection_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_camera_detection_interfaces_egg-7c1472228be0005a5ce5.json",
+					"name" : "ament_cmake_python_build_camera_detection_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_camera_detection_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_camera_detection_interfaces-099b5c91147c24a9f60f.json",
+					"name" : "ament_cmake_python_copy_camera_detection_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces-96ed72c22f967c9abead.json",
+					"name" : "camera_detection_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__cpp-ca16981793c359b1ab12.json",
+					"name" : "camera_detection_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "camera_detection_interfaces__py::@4c9bdd8220c6990cb5a1",
+					"jsonFile" : "target-camera_detection_interfaces__py-4bcf203b75f2804be2ec.json",
+					"name" : "camera_detection_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_generator_c-6238a0e5cc3656574f21.json",
+					"name" : "camera_detection_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_generator_py-9de545357a280c4ab0dc.json",
+					"name" : "camera_detection_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_c-2132eb42e6c7e35f7b53.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_c__pyext-6110e6abb76b267b104c.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_cpp-ed4f2038b530f2021c42.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_fastrtps_c-daca78c321b2368c6ef4.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_fastrtps_c__pyext-91c80667996222c3dda9.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_fastrtps_cpp-d004fa99ddaca001f785.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_introspection_c-e52cb93ec28cab5b4d50.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_introspection_c__pyext-499c1b06c67039a3aea5.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces__rosidl_typesupport_introspection_cpp-f998d3f6261b2baf5b81.json",
+					"name" : "camera_detection_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "camera_detection_interfaces__rs::@dd3d0895936f1f8a5afa",
+					"jsonFile" : "target-camera_detection_interfaces__rs-8ffd59704bde8cef600c.json",
+					"name" : "camera_detection_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_detection_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_detection_interfaces_uninstall-3313fcf644e56fffe726.json",
+					"name" : "camera_detection_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f9570265c0ba33f26563.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/caleb/Documents/robot_ws/build/camera_detection_interfaces",
+		"source" : "/home/caleb/Documents/robot_ws/src/camera_detection_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

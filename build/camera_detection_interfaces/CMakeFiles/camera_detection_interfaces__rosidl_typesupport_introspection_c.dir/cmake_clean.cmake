@@ -1,0 +1,13 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/camera_detection_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/camera_detection_interfaces/srv/detail/detect_pipe__type_support.c.o"
+  "CMakeFiles/camera_detection_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/camera_detection_interfaces/srv/detail/detect_pipe__type_support.c.o.d"
+  "libcamera_detection_interfaces__rosidl_typesupport_introspection_c.pdb"
+  "libcamera_detection_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/camera_detection_interfaces/srv/detail/detect_pipe__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/camera_detection_interfaces/srv/detail/detect_pipe__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/camera_detection_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

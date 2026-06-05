@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "camera_detection_interfaces__py",
+		"source" : "/home/caleb/Documents/robot_ws/build/camera_detection_interfaces/camera_detection_interfaces__py"
+	}
+}
