@@ -18,7 +18,7 @@ import rclpy
 from rclpy.node import Node
 from camera_detection_interfaces.srv import DetectPipe
 
-# --- CONFIGURACIÓN HARDCODEADA (según tu preferencia) ---
+
 API_KEY = "BqGtHqYl1bk4vT4Vshza"
 URL_ROBOFLOW = "https://serverless.roboflow.com/calebs-workspace-lepra/workflows/pvc-pipe-navigation-pipeline-1776989466746"
 TARGET_CAMERA = "Logitech BRIO"
