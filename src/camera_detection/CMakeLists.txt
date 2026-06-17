@@ -20,4 +20,8 @@ install(PROGRAMS scripts/detection_service.py
   RENAME detection_service
 )
 
+install(PROGRAMS scripts/mjpeg_camera.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME mjpeg_camera
+)
 ament_package()
