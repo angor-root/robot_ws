@@ -24,4 +24,9 @@ install(PROGRAMS scripts/mjpeg_camera.py
   DESTINATION lib/${PROJECT_NAME}
   RENAME mjpeg_camera
 )
+
+install(PROGRAMS scripts/simple_camera.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME simple_camera
+)
 ament_package()
