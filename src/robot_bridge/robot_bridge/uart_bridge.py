@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Nodo puente UART SOLO ENVÍO hacia myRIO.
-Sin recepción, sin heartbeat, sin timeout.
-Protocolo: 8E2, 9600 baudios.
+Formato de trama: A<lin.x>B<lin.y>C<ang.z>D  (mayúsculas)
+Configuración: 8E2, 9600 baudios.
 """
 
 import serial
@@ -23,7 +23,6 @@ class UARTBridge(Node):
         port = self.get_parameter('port').value
         baud = self.get_parameter('baudrate').value
 
-        # Abrir puerto serie solo para escritura
         try:
             self.ser = serial.Serial(
                 port=port,
@@ -37,22 +36,19 @@ class UARTBridge(Node):
             self.get_logger().error(f"No se pudo abrir {port}: {e}")
             raise
 
-        # Suscriptores (solo entrada)
         self.sub_cmd_vel  = self.create_subscription(Twist, '/cmd_vel', self.cmd_vel_cb, 10)
         self.sub_rack     = self.create_subscription(Int8, '/rack_cmd', self.rack_cb, 10)
         self.sub_gripper  = self.create_subscription(Bool, '/gripper_cmd', self.gripper_cb, 10)
         self.sub_flags    = self.create_subscription(UInt8, '/robot_flags', self.flags_cb, 10)
 
-        self.get_logger().info("UART Bridge (solo envío) iniciado.")
+        self.get_logger().info("UART Bridge (solo envío, 8E2 9600) iniciado.")
 
-    # ------------------------------------------------------------------
-    # Envío de comandos (thread-safe)
-    # ------------------------------------------------------------------
     def _send_line(self, line: str):
         with threading.Lock():
             try:
                 self.ser.write((line + '\n').encode('ascii'))
                 self.ser.flush()
+                self.get_logger().info(f"Enviado: {line}")
             except serial.SerialException:
                 self.get_logger().error("Error al escribir en UART")
 
@@ -60,7 +56,7 @@ class UARTBridge(Node):
         lin_x = msg.linear.x
         lin_y = msg.linear.y
         ang_z = msg.angular.z
-        self._send_line(f"a{lin_x:.2f}b{lin_y:.2f}c{ang_z:.2f}d")
+        self._send_line(f"A{lin_x:.2f}B{lin_y:.2f}C{ang_z:.2f}D")
 
     def rack_cb(self, msg: Int8):
         pos = max(0.0, min(1.0, float(msg.data)))
