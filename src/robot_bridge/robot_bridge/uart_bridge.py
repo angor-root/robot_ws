@@ -73,10 +73,20 @@ class UARTBridge(Node):
         """Reenvía la última velocidad periódicamente."""
         self._send_velocity()
 
-    def _send_velocity(self):
-        """Formatea y envía el comando de velocidad."""
-        line = f"A{self.last_lin_x*1000:.0f}B{self.last_lin_y*1000:.0f}C{self.last_ang_z*1000:.0f}D"
-        self._send_line(line)
+    def send_velocity(self):
+        a = 1 if (self.lin_x != 0.0 or self.ang_z != 0.0) else 0
+        # Convertir a enteros: mm/s y mrad/s
+        v_int = int(round(self.lin_x * 1000))
+        w_int = int(round(self.ang_z * 1000))
+        trama = f"{a}#{v_int}#{w_int}#0#0#0\r\n"
+
+        with threading.Lock():
+            try:
+                self.ser.write(trama.encode('ascii'))
+                self.ser.flush()
+                self.get_logger().info(f"Enviado: {trama.strip()}")
+            except serial.SerialException:
+                self.get_logger().error("Error al escribir en UART")
 
     def rack_cb(self, msg: Int8):
         pos = max(0.0, min(1.0, float(msg.data)))
