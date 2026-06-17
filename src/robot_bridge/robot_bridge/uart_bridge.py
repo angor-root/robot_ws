@@ -75,7 +75,7 @@ class UARTBridge(Node):
 
     def _send_velocity(self):
         """Formatea y envía el comando de velocidad."""
-        line = f"A{self.last_lin_x:.2f}B{self.last_lin_y:.2f}C{self.last_ang_z:.2f}D"
+        line = f"A{self.last_lin_x*1000:.0f}B{self.last_lin_y*1000:.0f}C{self.last_ang_z*1000:.0f}D"
         self._send_line(line)
 
     def rack_cb(self, msg: Int8):
