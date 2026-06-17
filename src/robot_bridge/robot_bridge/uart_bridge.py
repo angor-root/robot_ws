@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
 Puente UART hacia myRIO.
-Formato de trama enviada: A#B#C#D#E#F\\r\\n
-  A : 1 si hay comando de velocidad, 0 si no
-  B : velocidad lineal en mm/s (entero)
-  C : velocidad angular en mrad/s (entero)
-  D, E, F : reservados (0)
-Configuración del puerto: 8E2, 9600 baudios.
+Formato de trama enviada: A<v>B<w>C0D0E0F\\r\\n
+  A : velocidad lineal en mm/s (entero)
+  B : velocidad angular en mrad/s (entero)
+  C, D, E, F : reservados (0)
+Configuración: 8E2, 9600 baudios.
 """
 
 import serial
@@ -51,7 +50,7 @@ class UARTBridge(Node):
         # Reenviar cada 250 ms
         self.timer = self.create_timer(0.25, self.send_velocity)
 
-        self.get_logger().info("UART Bridge (A#B#C#D#E#F) iniciado.")
+        self.get_logger().info("UART Bridge (formato A<v>B<w>C0D0E0F) iniciado.")
 
     def _send_line(self, line: str):
         with threading.Lock():
@@ -67,12 +66,10 @@ class UARTBridge(Node):
         self.send_velocity()
 
     def send_velocity(self):
-        # A = 1 si hay movimiento
-        a = 1 if (self.lin_x != 0.0 or self.ang_z != 0.0) else 0
         # Convertir a enteros (mm/s, mrad/s)
         v_int = int(round(self.lin_x * 1000))
         w_int = int(round(self.ang_z * 1000))
-        trama = f"{a}#{v_int}#{w_int}#0#0#0\r\n"
+        trama = f"A{v_int}B{w_int}C0D0E0F\r\n"
 
         self._send_line(trama)
         self.get_logger().info(f"Enviado: {trama.strip()}")
