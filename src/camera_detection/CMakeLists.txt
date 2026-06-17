@@ -29,4 +29,10 @@ install(PROGRAMS scripts/simple_camera.py
   DESTINATION lib/${PROJECT_NAME}
   RENAME simple_camera
 )
+
+install(PROGRAMS scripts/teleop_keyboard.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME teleop_keyboard
+)
+
 ament_package()
