@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-Teleoperador incremental para robot diferencial.
+Teleoperador incremental con envío automático.
 Controles:
-  w/s : aumentar/disminuir velocidad lineal
-  e/d : aumentar/disminuir velocidad angular
-  i   : avanzar con la velocidad actual
-  k   : retroceder con la velocidad actual
-  j   : girar izquierda con la velocidad angular actual
-  l   : girar derecha con la velocidad angular actual
-  espacio : parar
-  q   : salir
+  w : aumentar velocidad lineal → AVANZA inmediatamente
+  s : disminuir velocidad lineal → retrocede si se vuelve negativa
+  a : aumentar velocidad angular (giro izquierda)
+  d : disminuir velocidad angular (giro derecha)
+  espacio : parar (pone velocidad a 0)
+  q : salir
+Cada pulsación ajusta la velocidad y publica el comando.
 """
 
 import sys
@@ -25,30 +24,23 @@ class IncrementalTeleop(Node):
         super().__init__('incremental_teleop')
         self.pub = self.create_publisher(Twist, '/cmd_vel', 10)
 
-        # Velocidades actuales (en unidades del robot: m/s, rad/s)
-        self.linear = 0.0
+        self.linear  = 0.0
         self.angular = 0.0
 
-        # Incrementos
-        self.linear_step = 0.05   # 5 cm/s por pulsación
-        self.angular_step = 0.1   # ~5.7°/s por pulsación
+        self.linear_step  = 0.05   # m/s
+        self.angular_step = 0.1    # rad/s
 
-        # Límites
-        self.max_linear = 0.3
+        self.max_linear  = 0.3
         self.max_angular = 1.0
 
-        self.print_help()
-
-    def print_help(self):
-        msg = """
-Teleoperador incremental.
-  Lineal:  w (+) / s (-)  (actual: {lin:.2f} m/s)
-  Angular: e (+) / d (-)  (actual: {ang:.2f} rad/s)
-  Movimiento: i (avanzar), k (retroceder), j (izq), l (der)
-  Espacio: parar
-  q: salir
-        """.format(lin=self.linear, ang=self.angular)
-        self.get_logger().info(msg)
+        self.get_logger().info(
+            "Teleoperador incremental activo.\n"
+            "  w/s: subir/bajar velocidad lineal (avance/retroceso)\n"
+            "  a/d: subir/bajar velocidad angular (giro izq/der)\n"
+            "  espacio: parar\n"
+            "  q: salir\n"
+            "Cada pulsación publica el comando."
+        )
 
     def get_key(self):
         fd = sys.stdin.fileno()
@@ -62,6 +54,15 @@ Teleoperador incremental.
         finally:
             termios.tcsetattr(fd, termios.TCSADRAIN, old)
 
+    def publish_current(self):
+        twist = Twist()
+        twist.linear.x  = self.linear
+        twist.angular.z = self.angular
+        self.pub.publish(twist)
+        self.get_logger().info(
+            f"Enviado: lin={self.linear:+.2f} m/s, ang={self.angular:+.2f} rad/s"
+        )
+
     def spin(self):
         try:
             while rclpy.ok():
@@ -72,46 +73,31 @@ Teleoperador incremental.
 
                 if key == 'w':
                     self.linear = min(self.linear + self.linear_step, self.max_linear)
+                    self.publish_current()
                 elif key == 's':
-                    self.linear = max(self.linear - self.linear_step, 0.0)
-                elif key == 'e':
+                    self.linear = max(self.linear - self.linear_step, -self.max_linear)
+                    self.publish_current()
+                elif key == 'a':
                     self.angular = min(self.angular + self.angular_step, self.max_angular)
+                    self.publish_current()
                 elif key == 'd':
-                    self.angular = max(self.angular - self.angular_step, 0.0)
-                elif key == 'i':
-                    self.publish_twist(self.linear, 0.0)
-                elif key == 'k':
-                    self.publish_twist(-self.linear, 0.0)
-                elif key == 'j':
-                    self.publish_twist(0.0, self.angular)
-                elif key == 'l':
-                    self.publish_twist(0.0, -self.angular)
+                    self.angular = max(self.angular - self.angular_step, -self.max_angular)
+                    self.publish_current()
                 elif key == ' ':
-                    self.publish_twist(0.0, 0.0)
+                    self.linear  = 0.0
+                    self.angular = 0.0
+                    self.publish_current()
                 elif key == 'q':
                     self.get_logger().info("Saliendo...")
                     break
-                else:
-                    pass
-
-                # Mostrar estado actual
-                if key in ('w', 's', 'e', 'd'):
-                    self.get_logger().info(
-                        f"Velocidades: lineal={self.linear:.2f}, angular={self.angular:.2f}"
-                    )
 
         except KeyboardInterrupt:
             pass
         finally:
-            # Detener al salir
-            self.publish_twist(0.0, 0.0)
-
-    def publish_twist(self, linear, angular):
-        twist = Twist()
-        twist.linear.x = linear
-        twist.angular.z = angular
-        self.pub.publish(twist)
-        self.get_logger().info(f"Enviado: lin={linear:.2f}, ang={angular:.2f}")
+            # Parada segura al salir
+            twist = Twist()
+            self.pub.publish(twist)
+            self.get_logger().info("Robot detenido.")
 
 def main(args=None):
     rclpy.init(args=args)

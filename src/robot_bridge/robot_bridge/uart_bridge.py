@@ -2,10 +2,10 @@
 """
 Puente UART hacia myRIO.
 Formato de trama enviada: A#B#C#D#E#F\\r\\n
-  A: 1 si hay comando de velocidad, 0 si no
-  B: velocidad lineal en mm/s (entero)
-  C: velocidad angular en mrad/s (entero)
-  D, E, F: reservados (0)
+  A : 1 si hay comando de velocidad, 0 si no
+  B : velocidad lineal en mm/s (entero)
+  C : velocidad angular en mrad/s (entero)
+  D, E, F : reservados (0)
 Configuración del puerto: 8E2, 9600 baudios.
 """
 
@@ -40,23 +40,20 @@ class UARTBridge(Node):
             self.get_logger().error(f"No se pudo abrir {port}: {e}")
             raise
 
-        # Últimas velocidades recibidas (en m/s y rad/s)
         self.lin_x = 0.0
         self.ang_z = 0.0
 
-        # Suscriptores (solo entrada)
         self.sub_cmd_vel  = self.create_subscription(Twist, '/cmd_vel', self.cmd_vel_cb, 10)
         self.sub_rack     = self.create_subscription(Int8, '/rack_cmd', self.rack_cb, 10)
         self.sub_gripper  = self.create_subscription(Bool, '/gripper_cmd', self.gripper_cb, 10)
         self.sub_flags    = self.create_subscription(UInt8, '/robot_flags', self.flags_cb, 10)
 
-        # Timer para reenvío periódico (cada 250 ms)
+        # Reenviar cada 250 ms
         self.timer = self.create_timer(0.25, self.send_velocity)
 
-        self.get_logger().info("UART Bridge (formato A#B#C#D#E#F, enteros) iniciado.")
+        self.get_logger().info("UART Bridge (A#B#C#D#E#F) iniciado.")
 
     def _send_line(self, line: str):
-        """Envía una línea por el puerto serie, añadiendo el terminador."""
         with threading.Lock():
             try:
                 self.ser.write(line.encode('ascii'))
@@ -65,16 +62,14 @@ class UARTBridge(Node):
                 self.get_logger().error("Error al escribir en UART")
 
     def cmd_vel_cb(self, msg: Twist):
-        """Actualiza las velocidades y envía inmediatamente."""
         self.lin_x = msg.linear.x
         self.ang_z = msg.angular.z
         self.send_velocity()
 
     def send_velocity(self):
-        """Construye y envía la trama de velocidad."""
-        # A = 1 si hay alguna velocidad no nula
+        # A = 1 si hay movimiento
         a = 1 if (self.lin_x != 0.0 or self.ang_z != 0.0) else 0
-        # Convertir a enteros: mm/s y mrad/s
+        # Convertir a enteros (mm/s, mrad/s)
         v_int = int(round(self.lin_x * 1000))
         w_int = int(round(self.ang_z * 1000))
         trama = f"{a}#{v_int}#{w_int}#0#0#0\r\n"
@@ -82,7 +77,6 @@ class UARTBridge(Node):
         self._send_line(trama)
         self.get_logger().info(f"Enviado: {trama.strip()}")
 
-    # Los siguientes callbacks se mantienen por si se usan, pero no envían periódicamente
     def rack_cb(self, msg: Int8):
         pos = max(0.0, min(1.0, float(msg.data)))
         self._send_line(f"R{pos:.2f}\r\n")
