@@ -34,7 +34,14 @@ class UARTBridge(Node):
         self.timeout = self.get_parameter('status_timeout').value
 
         try:
-            self.ser = serial.Serial(port, baud, timeout=0.02)
+            self.ser = serial.Serial(
+                port=port,
+                baudrate=baud,
+                timeout=0.02,
+                bytesize=serial.EIGHTBITS,
+                parity=serial.PARITY_EVEN,
+                stopbits=serial.STOPBITS_TWO
+            )
         except serial.SerialException as e:
             self.get_logger().error(f"No se pudo abrir {port}: {e}")
             raise
